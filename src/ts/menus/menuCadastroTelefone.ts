@@ -1,13 +1,13 @@
 import Menu from "../interfaces/menu";
 
-export default class MenuTipoCadastroCliente implements Menu {
+export default class MenuTipoTelefone implements Menu {
     mostrar(): void {
         console.clear()
         console.log(`****************************`)
-        console.log(`| Qual o tipo do cliente para cadastro? `)
+        console.log(`| Telefone: `)
         console.log(`----------------------`)
-        console.log(`| 1 - Titular`)
-        console.log(`| 2 - Dependente`)
+        console.log(`| 1 - Cadastrar`)
+        console.log(`| 0 - Finalizar cadastro de telefones`)
         console.log(`----------------------`)
     }
 }
