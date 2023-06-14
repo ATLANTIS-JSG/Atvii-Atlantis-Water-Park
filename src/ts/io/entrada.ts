@@ -26,13 +26,4 @@ export default class Entrada {
         return data
     }
 
-    public receberNumeroTelefone(mensagem: string): Telefone {
-        let prompt = promptSync();
-        let texto = prompt(`${mensagem}, no padrão XX-XXXXXXXXX: `);
-        let partes = texto.split("-");
-        let ddd = new String(partes[0]);
-        let numero = new String(partes[1]);
-        let telefone = new Telefone(ddd.valueOf(), numero.valueOf());
-        return telefone;
-    }
 }
