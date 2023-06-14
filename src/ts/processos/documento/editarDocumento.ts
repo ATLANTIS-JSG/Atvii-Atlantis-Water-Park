@@ -1,12 +1,12 @@
-import Processo from "../../abstracoes/processo";
-import Cliente from "../../modelos/cliente";
+import Processo from "../../abstracoes/processo"
+import Cliente from "../../modelos/cliente"
 
 export default class EditarDocumento extends Processo {
-  private cliente: Cliente;
+  private cliente: Cliente
   constructor(cliente: Cliente) {
-    super();
-    this.cliente = cliente;
-    this.execucao = true;
+    super()
+    this.cliente = cliente
+    this.execucao = true
   }
 
   processar() {
@@ -25,10 +25,10 @@ export default class EditarDocumento extends Processo {
 
     this.cliente.Documentos.filter((doc) => doc.Numero == documento).forEach(
       (novoDoc) => {
-        let novoDocNumero = this.entrada.receberTexto("Novo número: ");
-        let novaDataDoc = this.entrada.receberData("Nova data de expedição: ");
-        novoDoc.Numero = novoDocNumero;
-        novoDoc.DataExpedicao = novaDataDoc;
+        let novoDocNumero = this.entrada.receberTexto("Novo número: ")
+        let novaDataDoc = this.entrada.receberData("Nova data de expedição: ")
+        novoDoc.Numero = novoDocNumero
+        novoDoc.DataExpedicao = novaDataDoc
       }
     )
   }

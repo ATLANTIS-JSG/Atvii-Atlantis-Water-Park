@@ -1,30 +1,30 @@
-import Processo from "../../abstracoes/processo";
-import MenuCadastroTelefone from "../../menus/menuCadastroTelefone";
-import Cliente from "../../modelos/cliente";
-import CadastroTelefone from "./cadastroTelefone";
+import Processo from "../../abstracoes/processo"
+import MenuCadastroTelefone from "../../menus/menuCadastroTelefone"
+import Cliente from "../../modelos/cliente"
+import CadastroTelefone from "./cadastroTelefone"
 
 export default class CadastroClienteTelefone extends Processo {
-  private cliente: Cliente;
+  private cliente: Cliente
   constructor(cliente: Cliente) {
-    super();
-    this.menu = new MenuCadastroTelefone();
-    this.cliente = cliente;
-    this.execucao = true;
+    super()
+    this.menu = new MenuCadastroTelefone()
+    this.cliente = cliente
+    this.execucao = true
   }
 
   processar(): void {
-    console.log(`Iniciando o cadastro de telefones...`);
+    console.log(`Iniciando o cadastro de telefones...`)
     while (this.execucao) {
-      this.menu.mostrar();
-      this.opcao = this.entrada.receberNumero("Qual opção desejada?");
+      this.menu.mostrar()
+      this.opcao = this.entrada.receberNumero("Qual opção desejada?")
       switch (this.opcao) {
         case 1:
-          this.processo = new CadastroTelefone(this.cliente);
-          this.processo.processar();
-          break;
+          this.processo = new CadastroTelefone(this.cliente)
+          this.processo.processar()
+          break
         case 0:
-          this.execucao = false;
-          break;
+          this.execucao = false
+          break
         default:
           console.log('Opção não entendida :(')
       }

@@ -1,9 +1,9 @@
-import Processo from "../../abstracoes/processo";
-import MenuTipoDocumento from "../../menus/menuTipoDocumento";
-import Cliente from "../../modelos/cliente";
-import CadastroRg from "./cadastroRg";
-import CadastroCpf from "./cadastroCpf";
-import CadastroPassaporte from "./cadastroPassaporte";
+import Processo from "../../abstracoes/processo"
+import MenuTipoDocumento from "../../menus/menuTipoDocumento"
+import Cliente from "../../modelos/cliente"
+import CadastroRg from "./cadastroRg"
+import CadastroCpf from "./cadastroCpf"
+import CadastroPassaporte from "./cadastroPassaporte"
 
 export default class CadastrarDocumentosCliente extends Processo {
     private cliente: Cliente
