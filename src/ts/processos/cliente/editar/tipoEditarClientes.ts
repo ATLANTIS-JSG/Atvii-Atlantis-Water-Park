@@ -21,6 +21,9 @@ export default class TipoEditarClientes extends Processo {
         this.processo = new EditarDependente()
         this.processo.processar()
         break
+      case 0:
+        this.execucao = false
+        break
       default:
         console.log("Opção não entendida :(")
     }
